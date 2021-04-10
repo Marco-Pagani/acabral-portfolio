@@ -1,6 +1,4 @@
-# Default starter for Gridsome
-
-This is the project you get when you run `gridsome create new-project`.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2431d014-ce74-42e6-a51e-5f85cd97a17e/deploy-status)](https://app.netlify.com/sites/hungry-dijkstra-b6d290/deploys)
 
 ### 1. Install Gridsome CLI tool if you don't have
 

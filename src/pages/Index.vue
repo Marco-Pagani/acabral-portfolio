@@ -1,46 +1,19 @@
 <template>
   <Layout>
-    <navbar />
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
+    <div id="hero" class="container p-8 flex justify-between"> 
+      <p class="text-3xl font-semibold max-w-xl">
+        Hey 👋 I'm Amanda, an artist and designer in Miami, FL. I do character design and illustration.
+      </p>
+      <g-image alt="Example image" src="~/assets/headshot.png" width="135" class="rounded-full" />
+    </div>
 
-    <h1>Hello, world!</h1>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur
-      excepturi labore tempore expedita, et iste tenetur suscipit explicabo!
-      Dolores, aperiam non officia eos quod asperiores
-    </p>
-
-    <p class="home-links">
-      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener"
-        >Gridsome Docs</a
-      >
-      <a
-        href="https://github.com/gridsome/gridsome"
-        target="_blank"
-        rel="noopener"
-        >GitHub</a
-      >
-    </p>
   </Layout>
 </template>
 
 <script>
-import Navbar from "@/components/navbar";
-
 export default {
   metaInfo: {
-    title: "Hello, world!",
-  },
-  components: {
-    Navbar,
+    title: "Home",
   },
 };
 </script>
-
-<style>
-.home-links a {
-  margin-right: 1rem;
-}
-</style>
