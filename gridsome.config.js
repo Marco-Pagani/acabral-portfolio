@@ -3,22 +3,23 @@
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
+const tailwind = require('tailwindcss')
+const purgecss = require('@fullhuman/postcss-purgecss')
+
+const postcssPlugins = [
+  tailwind(),
+]
+
+if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss(require('./purgecss.config.js')))
 
 module.exports = {
   siteName: 'Amanda Cabral | Designer',
-  plugins: [
-    {
-      use: "gridsome-plugin-tailwindcss",
-      /**
-      * These are the default options.
-
-      options: {
-        tailwindConfig: './tailwind.config.js',
-        presetEnvConfig: {},
-        shouldImport: false,
-        shouldTimeTravel: false
+  plugins: [],
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: postcssPlugins,
       }
-      */
     }
-  ]
+  }
 }
