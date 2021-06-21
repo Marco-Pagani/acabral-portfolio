@@ -6,12 +6,23 @@ media_folder: "static/uploads"
 public_folder: "/uploads"
 
 collections:
-  - name: "works"
-    label: "Works"
-    folder: "works"
+  - name: "illustration"
+    label: "Illustration"
+    folder: "artworks"
     create: true
-    slug: "{{slug}}"
+    filter: {field: "category", value: "illustraion"}
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Work", name: "work", widget: "image"}
+      - {label: "Category", name: "category", widget: "select", options: ["illustraion", "character design"]}
+      - {label: "Description", name: "desc", widget: "markdown"}
+  - name: "character_design"
+    label: "Character Design"
+    folder: "artworks"
+    create: true
+    filter: {field: "category", value: "character design"}
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Work", name: "work", widget: "image"}
+      - {label: "Category", name: "category", widget: "select", options: ["illustraion", "character design"]}
       - {label: "Description", name: "desc", widget: "markdown"}
