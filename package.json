@@ -8,16 +8,20 @@
     "build": "gridsome build"
   },
   "dependencies": {
-    "gridsome": "^0.7.0"
+    "@gridsome/source-filesystem": "^0.6.2",
+    "@gridsome/transformer-remark": "^0.6.4",
+    "gridsome": "^0.7.0",
+    "gridsome-plugin-netlify-cms": "^1.0.9",
+    "netlify-cms": "^2.10.139"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^4.0.3",
+    "@fullhuman/postcss-purgecss": "^3.0.0",
     "autoprefixer": "^9",
     "eslint": "^7.24.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-vue": "^7.8.0",
-    "postcss": "^8",
+    "postcss": "^7",
     "prettier": "2.2.1",
-    "tailwindcss": "^2.2.2"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }
 }
