@@ -10,19 +10,19 @@ collections:
     label: "Illustration"
     folder: "artworks"
     create: true
-    filter: {field: "category", value: "illustraion"}
+    filter: {field: "category", value: "Illustration"}
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Work", name: "work", widget: "image"}
-      - {label: "Category", name: "category", widget: "select", options: ["illustraion", "character design"]}
-      - {label: "Description", name: "desc", widget: "markdown"}
+      - {label: "Hero Image", name: "hero", widget: "image"}
+      - {label: "Category", name: "category", widget: "select", options: ["Illustration", "Character Design"]}
+      - {label: "Full Post", name: "post", widget: "markdown"}
   - name: "character_design"
     label: "Character Design"
     folder: "artworks"
     create: true
-    filter: {field: "category", value: "character design"}
+    filter: {field: "category", value: "Character Design"}
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Work", name: "work", widget: "image"}
-      - {label: "Category", name: "category", widget: "select", options: ["illustraion", "character design"]}
-      - {label: "Description", name: "desc", widget: "markdown"}
+      - {label: "Hero Image", name: "hero", widget: "image"}
+      - {label: "Category", name: "category", widget: "select", options: ["Illustration", "Character Design"]}
+      - {label: "Full Post", name: "post", widget: "markdown"}
