@@ -21,6 +21,9 @@
       <p>Aut dolorem deserunt et doloribus odio aut consequatur assumenda. Ad tempora dolor non velit dolor sed sequi rerum non labore voluptas. Non tempora repudiandae et doloribus maiores ad exercitationem sequi ex perferendis esse At doloribus nemo! Ad aspernatur voluptate et reiciendis quam eos totam iste et minima animi. Cum quaerat maiores eos necessitatibus eaque A porro et repudiandae tenetur. Quo iusto quas in deleniti eveniet a quia ullam! Et optio exercitationem cum eveniet dicta ea nobis explicabo non maiores beatae et aperiam soluta non optio corrupti est expedita nisi! In placeat dolor quia rerum Aut labore?</p>
     </div>
   </div>
+  <div v-for="edge in $page.allArtworks.edges" :key="edge.node.id">
+      <h2>{{ edge.node.title }}</h2>
+    </div>
 </div>
   </Layout>
 </template>
@@ -32,3 +35,17 @@ export default {
   },
 };
 </script>
+
+<page-query>
+query {
+  allArtworks {
+		edges {
+      node {
+        title
+        category
+        hero
+      }
+    }
+  }
+}
+</page-query>
