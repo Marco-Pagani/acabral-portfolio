@@ -1,8 +1,8 @@
 <template>
 <nav>
-  <div class="flex w-full items-center justify-between px-6 h-16 bg-white text-gray-700 border-b border-gray-200 z-10">
+  <div class="flex w-full items-center justify-between px-6 h-16 lg:h-24 bg-white text-gray-700 border-b border-gray-200 lg:border-none z-10">
       <g-image alt="Logo" src="~/assets/logo.svg" width="200" class="w-24" />
-      <button class="" aria-label="Open Menu" @click="expanded = !expanded">
+      <button class="lg:hidden" aria-label="Open Menu" @click="expanded = !expanded">
         <svg
           fill="none"
           stroke="currentColor"
@@ -17,10 +17,16 @@
       </button>
   </div>
   <aside 
-    class="transform top-16 left-0 w-64 bg-white fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30"
-    :class="expanded ? 'translate-x-0' : '-translate-x-full'" 
+    :class="expanded ? 'translate-x-0' : '-translate-x-full'"
+    class="bg-white lg:translate-x-0 transform top-16 lg:top-24 left-0 w-3/4 lg:w-72  fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30"
     >
-    Side content
+    
+    <ul class="p-8 font-title text-xl">
+      <li>illustration</li>
+      <li>character design</li>
+      <li>about</li>
+      <li>contact</li>
+    </ul>
   </aside>
 </nav>
 
