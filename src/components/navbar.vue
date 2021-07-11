@@ -22,15 +22,30 @@
     >
     
     <ul class="p-8 font-title text-xl">
-      <li>illustration</li>
-      <li>character design</li>
-      <li>about</li>
-      <li>contact</li>
+      <li><g-link to="/illustration/">illustration</g-link></li>
+      <li><g-link to="/character_design/">character design</g-link></li>
+      <li><g-link to="/about/">about</g-link></li>
+      <li><g-link to="/contact/">contact</g-link></li>
     </ul>
   </aside>
 </nav>
 
 </template>
+
+<style scoped>
+li {
+	position: relative;
+}
+li:hover:before {
+  content: '';
+	position: absolute;
+	left: -8px;
+  top: 10%;
+	height: 80%;
+  width: 4px;
+	background-color: #6592a6;
+}
+</style>
 
 <script>
 export default {
