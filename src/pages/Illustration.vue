@@ -1,8 +1,6 @@
 <template>
   <Gallery>
-    <div v-for="edge in $page.allProjects.edges" :key="edge.node.id" class="mb-6 relative">
-      <thumbnail :node="edge.node" />
-    </div>
+    <thumbnail v-for="edge in $page.allProjects.edges" :key="edge.node.id" :node="edge.node" class="mb-6 relative" />
   </Gallery>
 </template>
 

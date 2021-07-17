@@ -1,9 +1,12 @@
 <template>
-    <Layout>
-  <div>
-      test
-  </div>
-    </Layout>
+  <Layout>
+    <div>
+      {{$page.projects.title}}
+    </div>
+    <div>
+      {{$page.projects.post}}
+    </div>
+  </Layout>
 </template>
 
 <page-query>

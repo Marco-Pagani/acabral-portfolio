@@ -26,11 +26,8 @@ module.exports = function (api) {
       allProjects {
           edges {
             node {
-              title
-              category
-              hero
+              id
               slug
-              post
             }
           }
         }
