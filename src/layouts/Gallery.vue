@@ -1,6 +1,8 @@
 <template>
 <site-wrapper>
-  <slot />
+    <div class="pl-25% box-border max-w-4xl mx-auto md:masonry-2 lg:masonry-3 break-inside before:box-inherit after:box-inherit">
+        <slot />
+    </div>
 </site-wrapper>
 </template>
 

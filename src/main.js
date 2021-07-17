@@ -5,10 +5,12 @@
 require('~/main.css')
 
 import DefaultLayout from '~/layouts/Default.vue'
+import GalleryLayout from '~/layouts/Gallery.vue'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
+  Vue.component('Gallery', GalleryLayout)
 
   head.script.push({
     src: 'https://identity.netlify.com/v1/netlify-identity-widget.js'

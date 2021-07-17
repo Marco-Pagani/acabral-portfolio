@@ -1,8 +1,8 @@
 <template>
 <nav>
-  <div class="flex w-full items-center justify-between px-6 h-16 bg-white text-gray-700 border-b border-gray-200 z-10">
-      <g-image alt="Logo" src="~/assets/logo.svg" width="200" class="w-24" />
-      <button class="" aria-label="Open Menu" @click="expanded = !expanded">
+  <div class="flex w-full items-center justify-between px-6 h-16 lg:h-24 bg-white text-gray-700 z-10">
+      <g-link to="/"><g-image alt="Logo" src="~/assets/logo.svg" width="200" class="w-24" /></g-link>
+      <button class="lg:hidden" aria-label="Open Menu" @click="expanded = !expanded">
         <svg
           fill="none"
           stroke="currentColor"
@@ -17,14 +17,35 @@
       </button>
   </div>
   <aside 
-    class="transform top-16 left-0 w-64 bg-white fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30"
-    :class="expanded ? 'translate-x-0' : '-translate-x-full'" 
+    :class="expanded ? 'translate-x-0' : '-translate-x-full'"
+    class="bg-white lg:translate-x-0 transform top-16 lg:top-24 left-0 w-1/2 lg:w-72  fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30"
     >
-    Side content
+    
+    <ul class="p-8 font-title text-xl">
+      <li><g-link to="/illustration/">illustration</g-link></li>
+      <li><g-link to="/character-design/">character design</g-link></li>
+      <li><g-link to="/about/">about</g-link></li>
+      <li><g-link to="/contact/">contact</g-link></li>
+    </ul>
   </aside>
 </nav>
 
 </template>
+
+<style scoped>
+li {
+	position: relative;
+}
+li:hover:before {
+  content: '';
+	position: absolute;
+	left: -8px;
+  top: 10%;
+	height: 80%;
+  width: 4px;
+	background-color: #6592a6;
+}
+</style>
 
 <script>
 export default {

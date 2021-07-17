@@ -18,7 +18,7 @@ export default {
 
 <page-query>
 query {
-  allProjects {
+  allProjects(filter:{category:{eq: "Character Design"}}) {
 		edges {
       node {
         title
