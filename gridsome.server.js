@@ -5,12 +5,45 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const slug = require('limax')
+
 module.exports = function (api) {
-  api.loadSource(({ addCollection }) => {
-    // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
+  api.loadSource(({ addSchemaResolvers }) => {
+    addSchemaResolvers({
+      Projects: {
+        slug: {
+          type: 'String',
+          resolve(obj) {
+            return `/${slug(obj.category)}/${slug(obj.title)}`
+          }
+        }
+      }
+    })
   })
 
-  api.createPages(({ createPage }) => {
-    // Use the Pages API here: https://gridsome.org/docs/pages-api/
+  api.createPages(async ({ graphql, createPage }) => {
+    const { data } = await graphql(`{
+      allProjects {
+          edges {
+            node {
+              title
+              category
+              hero
+              slug
+              post
+            }
+          }
+        }
+      }`)
+
+    data.allProjects.edges.forEach(({ node }) => {
+      createPage({
+        path: node.slug,
+        component: './src/templates/Project.vue',
+        context: {
+          id: node.id
+        }
+      })
+    })
   })
 }

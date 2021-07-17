@@ -1,7 +1,7 @@
 <template>
   <div>
     <navbar />
-    <div class="min-h-screen p-20 lg:pl-72">
+    <div class="min-h-screen px-20 pt-6 lg:pt-0 lg:pl-72">
         <slot />
     </div>
   </div>

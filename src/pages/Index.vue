@@ -1,6 +1,6 @@
 <template>
   <Gallery>
-    <div v-for="edge in $page.allArtworks.edges" :key="edge.node.id" class="mb-6 relative">
+    <div v-for="edge in $page.allProjects.edges" :key="edge.node.id" class="mb-6 relative">
       <thumbnail :node="edge.node" />
     </div>
   </Gallery>
@@ -20,12 +20,13 @@ export default {
 
 <page-query>
 query {
-  allArtworks {
+  allProjects {
 		edges {
       node {
         title
         category
         hero
+        slug
       }
     }
   }
