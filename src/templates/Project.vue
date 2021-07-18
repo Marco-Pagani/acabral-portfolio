@@ -3,9 +3,7 @@
     <div>
       {{$page.projects.title}}
     </div>
-    <div>
-      {{$page.projects.post}}
-    </div>
+     <div v-html="$page.projects.content" />
   </Layout>
 </template>
 
@@ -13,7 +11,7 @@
 query ($id: ID!) {
   projects(id: $id) {
     title
-    post
+    content
   }
 }
 </page-query>
